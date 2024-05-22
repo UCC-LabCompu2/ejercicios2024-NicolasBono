@@ -1,8 +1,8 @@
 /**
  * Descripción
- * @method Nombre de la función
- * @param Parámetro A
- * @param Parámetro B
+ * @method convertirunidades la función
+ * @param {sting}nombre
+ * @param {string}valor
  * @return Valor que retorna
  */
 function convertirunidades(nombre, valor) {
