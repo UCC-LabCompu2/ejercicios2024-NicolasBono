@@ -7,6 +7,9 @@
  */
 let convertirunidades=(nombre, valor)=>{
     let metro,yarda,pie,pulgada;
+    if (valor.includes(",")){
+        valor=valor.replace(",",".");
+    }
     if (isNaN(valor)) {
         alert("el valor ingresado no es correcto ")
         metro= "";
@@ -34,12 +37,12 @@ let convertirunidades=(nombre, valor)=>{
        pulgada = valor * 36;
        pie= valor * 3;
     }
-
-        document.getElementById("metro").valor = metro;
-        document.getElementById("pulgada").valor = pulgada;
-        document.getElementById("pie").valor = pie;
-        document.getElementById("yarda").valor=yarda;
-
+    {
+        document.getElementById("metro").value = Math.round (metro*100)/100;
+        document.getElementById("pulgada").value = Math.round(pulgada*100)/100;
+        document.getElementById("yarda").value = yarda.toFixed(2);
+        document.getElementById("pie").value = pie.toFixed(2);
+    }
 }
 function convertirgradosradianes(id){
     let grad,rad;
