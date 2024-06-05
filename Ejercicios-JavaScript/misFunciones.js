@@ -101,3 +101,23 @@ function dibujarcirculocuadrado() {
     ctx.stroke();
     ctx.fill();
 }
+function cargarEventlistener(){
+    document.getElementById("myCanvas").addEventListener("mousemove",dibujar);
+
+}
+function dibujar(event){
+    const canvas=document.getElementById("myCanvas");
+    const ctx=canvas.getContext("2d");
+    let posx=event.clientX;
+    let posy=event.clientY;
+    console.log(posx,posy);
+    canvas.onmousedown= function (){bandera=true};
+    canvas.onmouseup= function (){bandera=false};
+    if(bandera){
+        ctx.fillRect(posx,posy,5,5);
+    }
+}
+function borrarcanvas(){
+    const canvas=document.getElementById("myCanvas");
+    canvas.width=canvas.width;
+}
