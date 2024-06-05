@@ -156,3 +156,15 @@ function dibujarcuadirculado(){
     ctx.lineTo(anchomax/2,alturamax);
     ctx.stroke();
 }
+function dibujarImagen(posX, posY) {
+    const canvas = document.getElementById("myCanvas");
+    const ctx = canvas.getContext("2d");
+
+    console.log(posX, posY);
+    const img = new Image();
+    img.src = "images/auto.png";
+    img.onload = function () {
+        canvas.width = canvas.width;
+        ctx.drawImage(img, posX, posY);
+    }
+}
