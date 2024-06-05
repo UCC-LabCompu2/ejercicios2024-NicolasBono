@@ -66,21 +66,21 @@ let mostrarocultar=(valor)=>{
 let suma=() => {
     const s1=Number(document.getElementById("nums1").value);
     const s2=Number(document.getElementById("nums2").value);
-    document.getElementById("totalS").value=s1+s2;
+    document.getElementById("totalS").innerHTML=s1+Number(s2);
 }
 let resta=() => {
     const s1=Number(document.getElementById("numr1").value);
     const s2=Number(document.getElementById("numr2").value);
-    document.getElementById("totalR").value=s1-s2;
+    document.getElementById("totalR").innerHTML=s1-s2;
 }
 let multiplicar=() => {
     const s1=Number(document.getElementById("numm1").value);
     const s2=Number(document.getElementById("numm2").value);
-    document.getElementById("totalM").value=s1*s2;
+    document.getElementById("totalM").innerHTML=s1*s2;
 }
 
 let division=() => {
     const s1=Number(document.getElementById("numd1").value);
     const s2=Number(document.getElementById("numd2").value);
-    document.getElementById("totalD").value=s1/s2;
+    document.getElementById("totalD").innerHTML=s1/s2;
 }
