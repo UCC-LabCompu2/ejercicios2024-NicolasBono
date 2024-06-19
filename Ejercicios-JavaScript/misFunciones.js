@@ -163,8 +163,20 @@ function dibujarImagen(posX, posY) {
     console.log(posX, posY);
     const img = new Image();
     img.src = "images/auto.png";
+    if(posX<0 || posY<0||posX>canvas.width||posY>canvas.height){
+        mostrardialog();
+    }
     img.onload = function () {
         canvas.width = canvas.width;
-        ctx.drawImage(img, posX, posY);
+        ctx.drawImage(img, posX,posY);
     }
+    let mostrardialog=()=>{
+const dialog=document.getElementById("mensajedeerror");
+mostrardialog();
+    }
+    let cierredialog=()=>{
+        const dialog=document.getElementById("mensajedeerror");
+        cierredialog();
+    }
+
 }
