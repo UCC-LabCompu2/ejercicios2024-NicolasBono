@@ -194,3 +194,17 @@ function cargarresult(){
     un=urlcomp.split("#")[2];
     document.getElementById("dist").value = cant + " "+ un;
 }
+function guardarlocalstorage(){
+let distancia,unidad;
+    distancia=document.getElementById("distancia").value;
+    unidad=document.getElementsByName("unidades")[0].value;
+    localStorage.setItem("distanciaLS", distancia);
+    localStorage.setItem("unidadLS",unidad);
+    window.open('2_Web.html');
+}
+function cargarlocalstorage(){
+    let cant,un;
+    cant=localStorage.getItem("distanciaLS");
+    un=localStorage.getItem("unidadLS");
+    document.getElementById("dist").value = cant + " "+ un;
+}
