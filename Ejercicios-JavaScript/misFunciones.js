@@ -178,7 +178,6 @@ mostrardialog();
         const dialog=document.getElementById("mensajedeerror");
         cierredialog();
     }
-
 }
 function cargarweb(){
     var cant,unidad,urlcomo;
@@ -206,5 +205,5 @@ function cargarlocalstorage(){
     let cant,un;
     cant=localStorage.getItem("distanciaLS");
     un=localStorage.getItem("unidadLS");
-    document.getElementById("dist").value = cant + " "+ un;
+    document.getElementById("dist").value = cant + " "+ un ;
 }
