@@ -180,3 +180,17 @@ mostrardialog();
     }
 
 }
+function cargarweb(){
+    var cant,unidad,urlcomo;
+    cant=document.getElementById("distancia").value;
+    unidad=document.getElementsByName("unidades")[0].value;
+    urlComo="segundaWeb.html#" + cant+"#"+unidad;
+    window.open(urlComo);
+}
+function cargarresult(){
+  var  urlcomp,cant,un;
+  urlcomp=window.location.href.split("/")[5];
+  cant=urlcomp.split("#")[1];
+    un=urlcomp.split("#")[2];
+    document.getElementById("dist").value = cant + " "+ un;
+}
